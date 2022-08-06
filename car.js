@@ -119,14 +119,14 @@ if(this.controls.right){
 }
 
 
-    draw(ctx){
+    draw(ctx,color){
         
         //changes color upon contact with the borders 
         
         if(this.damaged){
             ctx.fillStyle="gray";
         }else{
-            ctx.fillStyle="black";
+            ctx.fillStyle=color;
         }
         
         
