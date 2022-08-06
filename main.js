@@ -1,4 +1,3 @@
-//things i will learn 
 //car physics
 //road generation
 //sensors
@@ -13,7 +12,7 @@ const road= new road(canvas.width/2,canvas.width*0.9);
 const car = Car(road.getLaneCenter(1),100,30,50,"KEYS");
 //lets add traffic using arrays
 const traffic=[
-    new Car (road.getLaneCenter(1),-100,30,50,"DUMMY")
+    new Car (road.getLaneCenter(1),-100,30,50,"DUMMY,2")
 ];
 animate();
 function animate(){
