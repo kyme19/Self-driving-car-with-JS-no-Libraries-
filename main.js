@@ -18,10 +18,10 @@ animate();
 function animate(){
     
     for(let i=0; i<traffic.length; i++){
-        traffic[1].update(road.borders);
+        traffic[1].update(road.borders,[]);
     }
     
-    car.update(road.borders);
+    car.update(road.borders,traffic);
     canvas.height=window.innerHeight;
     ctx.traslate(0,-car.y+canvas.height*0.7);
 
