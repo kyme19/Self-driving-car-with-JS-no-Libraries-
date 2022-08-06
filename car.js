@@ -19,9 +19,12 @@ class Car{
         this.controls=new this.controls();
 
     }   update(roadBorders){
-      this.move();
+        
+      if (!this.damaged){
+      this.#move();
       this.polygon=this.#createPolygon();
       this.damaged=this.#assessDamage(roadBorders); 
+      }  
       this.sensor.update(roadBorders);
     }
     
@@ -110,6 +113,16 @@ if(this.controls.right){
 
 
     draw(ctx){
+        
+        //changes color upon contact with the borders 
+        
+        if(this.damaged){
+            ctx.fillStyle="gray";
+        }else{
+            ctx.fillStyle="black";
+        }
+        
+        
         
         ctx.beginpath();
         ctx.moveTo(this.polygon[0].x,this.polygon[0]-y);
