@@ -9,7 +9,7 @@ const canvas= document.getElementById('myCanvas');
 canvas.width=200;
 const ctx= canvas.getContext("2d");
 const road= new road(canvas.width/2,canvas.width*0.9);
-const car = Car(road.getLaneCenter(1),100,30,50,"KEYS");
+const car = Car(road.getLaneCenter(1),100,30,50,"AI");
 //lets add traffic using arrays
 const traffic=[
     new Car (road.getLaneCenter(1),-100,30,50,"DUMMY,2")
