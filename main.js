@@ -40,5 +40,7 @@ function animate(){
     car.draw(ctx,"blue");
 
     ctx.restore();
+    
+    Visualizer.drawNetwork(networkCtx,car.braine);
     requestAnimationFrame(animate);
 }
