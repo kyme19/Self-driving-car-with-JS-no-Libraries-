@@ -19,11 +19,15 @@ const N=100;
 const cars=generateCars(N);
 let bestCar=cars[0];
 if(localStorage.getItem("bestBrain")){
-    bestCar.brain=JSON.parse(
-         localStorage.getItem("bestBrain")
-    );
+    for (let i=O i<cars.length;i++){
+         
+    cars[i].brain=JSON.parse(
+         localStorage.getItem("bestBrain"));
+        if(i!=0){
+            NeuralNetwork.mutate(cars[i].brain,0.2);
+        }
+    }
 }
-
 //const car = Car(road.getLaneCenter(1),100,30,50,"AI");
 //lets add traffic using arrays
 const traffic=[
