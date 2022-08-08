@@ -43,12 +43,16 @@ function animate(time){
           cars[i].update(road.borders,traffic);
     }
     
-    car.update(road.borders,traffic);
+    const bestCar = cars.find(c=>.y==Math.min(
+                             ...cars.map(c=>y)
+                             ));
+    
+    //car.update(road.borders,traffic);
 
     carCanvas.height=window.innerHeight;
     networkCanvas.height=window.innerHeight;
     
-    ctx.traslate(0,-cars[0].y+carCanvas.height*0.7);
+    ctx.traslate(0,-bestCar.y+carCanvas.height*0.7);
 
     road.draw(ctx);
     
@@ -64,12 +68,12 @@ function animate(time){
     }
     
     carCtx.globalAlpha=1;
-    cars[0].draw(ctx,"blue",true);
+    bestCar.draw(ctx,"blue",true);
    // car.draw(ctx,"blue");
 
     ctx.restore();
     
     networkCtx.lineDashOffset=-time/50;
-    Visualizer.drawNetwork(networkCtx,cars[0].brain);
+    Visualizer.drawNetwork(networkCtx,bestCar.brain);
     requestAnimationFrame(animate);
 }
