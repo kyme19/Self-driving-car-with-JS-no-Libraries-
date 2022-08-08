@@ -135,7 +135,7 @@ if(this.controls.right){
 }
 
 
-    draw(ctx,color){
+    draw(ctx,color,drawSensor=false){
         
         //changes color upon contact with the borders 
         
@@ -171,7 +171,7 @@ if(this.controls.right){
 
                 ctx.restore(); 
         */
-                if(this.sensor){
+                if(this.sensor && drawSensor){
                 this.sensor.draw(ctx);
                }
            }
