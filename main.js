@@ -27,7 +27,10 @@ if(localStorage.getItem("bestBrain")){
 //const car = Car(road.getLaneCenter(1),100,30,50,"AI");
 //lets add traffic using arrays
 const traffic=[
-    new Car (road.getLaneCenter(1),-100,30,50,"DUMMY,2")
+    new Car (road.getLaneCenter(1),-100,30,50,"DUMMY,2"),
+    new Car (road.getLaneCenter(0),-300,30,50,"DUMMY,2"),
+    new Car (road.getLaneCenter(2),-300,30,50,"DUMMY,2"),
+    
 ];
 animate();
 
