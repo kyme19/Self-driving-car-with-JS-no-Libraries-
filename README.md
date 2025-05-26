@@ -6,5 +6,5 @@ This project is built on top of this technology. It uses Javascript to control t
 This project is intended to show others how this technology works, and to inspire others to build their own self driving cars. 
 
 
-// This project is still under development and will be updated sooner with more features in the future.
-// P.S Any help to this project will be appreciated.
+
+seriously though this project is a joke but it works tho😂
